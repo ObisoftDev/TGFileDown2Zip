@@ -1,0 +1,9 @@
+xmltodict
+python-telegram-bot
+ujson
+xmltodict
+pyOpenSSL
+requests
+youtube-dl
+telethon
+bs4
