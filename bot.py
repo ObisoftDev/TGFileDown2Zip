@@ -118,8 +118,9 @@ async def down_to_tel(urls,bot,ev,msg):
                 zip.write(file_name)
            
                 os.unlink(file_name)
-                   
-                for f in multiFile.files:
+         zip.close()
+         mult_file.close()
+	 for f in multiFile.files:
                      conf.parte += 1
                      conf.total = len(multiFile.files)
                      f_size = await get_file_size(f)
@@ -127,8 +128,6 @@ async def down_to_tel(urls,bot,ev,msg):
                      await bot.send_file(ev.message.chat,f)
                      conf.totalsub += f_size
                      os.unlink(f)
-         zip.close()
-         mult_file.close()
     except Exception as e:
             await msg.edit('(down_chunked) ' + str(e))
             print(str(e))
