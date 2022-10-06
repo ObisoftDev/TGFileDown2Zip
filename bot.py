@@ -278,7 +278,7 @@ def init():
                       await processMy(ev,bot)
 
 
-        loop = asyncio.get_event_loop() 
+        loop = asyncio.get_running_loop() 
         loop.run_forever()
     except:
         init()
