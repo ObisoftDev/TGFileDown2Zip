@@ -4,7 +4,7 @@ class Config(object):
           self.BotToken     = os.environ.get('bot_token','')
           self.api_id = os.environ.get('api_id','')
           self.api_hash = os.environ.get('api_hash','')
-          self.AdminUsers = os.environ.get('bot_token','')
+          self.AdminUsers = str(os.environ.get('admins','')).split(',')
           self.ChunkSizeTel = 2000
           
           self.ChunkSize    = 150
